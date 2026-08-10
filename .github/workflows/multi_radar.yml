@@ -1,0 +1,48 @@
+name: Радар вакансий (много пользователей)
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # link-telegram: каждые 10 минут (ловит нажатия Start)
+    - cron: "0 5 * * *"      # run-radar: раз в сутки, 08:00 по Москве
+  workflow_dispatch: {}
+
+jobs:
+  link-telegram:
+    if: github.event.schedule == '*/10 * * * *' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Привязать новых пользователей по /start
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          ADMIN_SHEET_ID: ${{ secrets.ADMIN_SHEET_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: python link_telegram.py
+      - name: Сохранить offset
+        run: |
+          git config user.name "radar-bot"
+          git config user.email "radar-bot@users.noreply.github.com"
+          git add telegram_offset.json
+          git diff --staged --quiet || git commit -m "chore: telegram offset"
+          git diff --staged --quiet || git push
+
+  run-radar:
+    if: github.event.schedule == '0 5 * * *' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Прогнать радар для всех пользователей
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          ADMIN_SHEET_ID: ${{ secrets.ADMIN_SHEET_ID }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        run: python multi_run.py
