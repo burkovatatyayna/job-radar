@@ -1,0 +1,28 @@
+# hh.yaml — конфиг сканера hh.ru.
+# Два прохода: 1) по целевым компаниям (их id на hh.ru), 2) по рынку (по титулам).
+
+# Целевые компании — если хочешь следить именно за ними.
+# employer_id можно найти в URL страницы компании на hh.ru: hh.ru/employer/<id>
+target_companies:
+  - name: "Пример Компания 1"
+    employer_id: "000000"
+  - name: "Пример Компания 2"
+    employer_id: "000000"
+
+# Поиск по рынку — какие заголовки вакансий ищем (используется как query text)
+title_queries:
+  - "Product Manager"
+  - "Senior Product Manager"
+  - "Head of Product"
+
+# Регион hh.ru (area id). 1 = Москва, 2 = Санкт-Петербург, 113 = Россия (вся)
+area_ids: [1, 2]
+
+settings:
+  per_page: 20
+  max_pages: 3
+  request_delay_sec: 3
+  timeout_sec: 15
+  user_agent: "Mozilla/5.0 (compatible; PersonalJobRadar/1.0; +read-only)"
+  # Обогащение описанием: дёргаем карточку вакансии и берём JSON-LD (schema.org/JobPosting)
+  enrich_with_description: true

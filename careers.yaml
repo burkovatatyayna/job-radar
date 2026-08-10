@@ -1,0 +1,36 @@
+# careers.yaml — точечные парсеры карьерных сайтов конкретных компаний.
+# Каждая компания — свой формат страницы, поэтому конфиг + минимальный код
+# в fetch_careers.py (см. функцию parse_generic_html и parse_json_api).
+
+companies:
+  - name: "Яндекс"
+    type: "html"
+    url: "https://yandex.ru/jobs/vacancies?text=product+manager"
+    # CSS-селекторы под структуру страницы (пример — проверь актуальную вёрстку)
+    selectors:
+      item: "a.vacancy-item"
+      title: ".vacancy-item__title"
+      link_attr: "href"
+
+  - name: "Сбер"
+    type: "json_api"
+    url: "https://sbergroup-career-api.example/vacancies?query=product"
+    # Если у компании есть внутренний JSON API — забираем напрямую,
+    # без парсинга HTML. Путь до полей ниже — под конкретный ответ API.
+    json_path:
+      items: "data.items"
+      title: "title"
+      link: "url"
+
+  - name: "Avito"
+    type: "html"
+    url: "https://avito.tech/vacancies/"
+    selectors:
+      item: ".vacancy-card"
+      title: ".vacancy-card__title"
+      link_attr: "href"
+
+settings:
+  request_delay_sec: 3
+  timeout_sec: 15
+  user_agent: "Mozilla/5.0 (compatible; PersonalJobRadar/1.0; +read-only)"

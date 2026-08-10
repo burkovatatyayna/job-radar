@@ -1,0 +1,24 @@
+# channels.yaml — Telegram-каналы, которые обходим через публичный веб-превью
+# https://t.me/s/<handle> (без API-ключей и без входа в аккаунт).
+#
+# weight: насколько источнику доверяем (1-3), используется как мягкий сигнал
+#         в скоринге (необязательно к использованию, можно убрать).
+# category: "vacancies" (публикует вакансии) | "mixed" (вакансии + новости рынка)
+
+channels:
+  - handle: "hh_vacancies_example"      # замени на реальный хэндл без @
+    category: "vacancies"
+    weight: 3
+  - handle: "product_jobs_example"
+    category: "vacancies"
+    weight: 2
+  - handle: "career_market_news_example"
+    category: "mixed"
+    weight: 1
+
+# Настройки сбора
+settings:
+  window_hours: 24        # окно "за сколько часов брать посты"
+  request_delay_sec: 2    # пауза между запросами к каналам (вежливость)
+  timeout_sec: 15
+  user_agent: "Mozilla/5.0 (compatible; PersonalJobRadar/1.0; +read-only)"
