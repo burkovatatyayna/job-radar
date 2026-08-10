@@ -216,7 +216,7 @@ def main() -> None:
     for user in users:
         try:
             process_user(user, client, telegram_token)
-  except Exception as e:
+        except Exception as e:
             # Ошибка у одного пользователя не должна ронять весь прогон остальных
             print(f"[multi_run] ОШИБКА у пользователя {user.get('name')}: "
                   f"{type(e).__name__}: {e}")
