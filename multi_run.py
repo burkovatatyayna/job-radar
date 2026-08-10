@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import os
 import time
+import traceback
 from typing import Any
 
 try:
@@ -215,9 +216,11 @@ def main() -> None:
     for user in users:
         try:
             process_user(user, client, telegram_token)
-        except Exception as e:
+  except Exception as e:
             # Ошибка у одного пользователя не должна ронять весь прогон остальных
-            print(f"[multi_run] ОШИБКА у пользователя {user.get('name')}: {e}")
+            print(f"[multi_run] ОШИБКА у пользователя {user.get('name')}: "
+                  f"{type(e).__name__}: {e}")
+            traceback.print_exc()
 
 
 if __name__ == "__main__":
