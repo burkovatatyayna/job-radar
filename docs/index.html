@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Радар вакансий — регистрация</title>
+<style>
+  body { font-family: -apple-system, sans-serif; max-width: 560px; margin: 40px auto; padding: 0 16px; color: #222; }
+  h1 { font-size: 22px; }
+  label { display: block; margin-top: 16px; font-weight: 600; font-size: 14px; }
+  .hint { font-weight: 400; color: #777; font-size: 13px; margin-top: 2px; }
+  input, textarea, select { width: 100%; padding: 8px; margin-top: 6px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; box-sizing: border-box; }
+  textarea { min-height: 70px; }
+  button { margin-top: 24px; padding: 12px 20px; background: #2563eb; color: white; border: none; border-radius: 8px; font-size: 15px; cursor: pointer; }
+  button:disabled { background: #999; }
+  #result { margin-top: 24px; padding: 16px; border-radius: 8px; background: #f0f9f0; border: 1px solid #bfe6bf; display: none; }
+  #result a { color: #2563eb; }
+  #error { margin-top: 16px; color: #c00; display: none; }
+</style>
+</head>
+<body>
+
+<h1>📡 Радар вакансий — подключение</h1>
+<p>Заполните форму один раз. Дальше система сама каждый день будет присылать вам подходящие вакансии в Telegram и складывать их в вашу личную таблицу.</p>
+
+<form id="signupForm">
+  <label>Имя
+    <input type="text" name="name" required>
+  </label>
+
+  <label>E-mail
+    <div class="hint">на него дадим доступ к вашей личной Google Таблице</div>
+    <input type="email" name="email" required>
+  </label>
+
+  <label>Кратко о себе для оценки вакансий
+    <div class="hint">2-4 предложения: кто вы, какой опыт, что ищете. Чем конкретнее — тем точнее подбор.</div>
+    <textarea name="candidate_summary" required placeholder="Например: Senior Product Manager с 6 годами опыта в B2C-финтехе. Ищу роль с полным владением продуктовым направлением."></textarea>
+  </label>
+
+  <label>Желаемые должности
+    <div class="hint">через запятую</div>
+    <input type="text" name="target_titles" required placeholder="Product Manager, Head of Product">
+  </label>
+
+  <label>Уровень
+    <div class="hint">через запятую: junior, middle, senior, lead, head</div>
+    <input type="text" name="seniority" required placeholder="senior, lead">
+  </label>
+
+  <label>Допустимые локации
+    <div class="hint">через запятую</div>
+    <input type="text" name="locations_allowed" required placeholder="Москва, Санкт-Петербург, Удалённо">
+  </label>
+
+  <label>Telegram-каналы с вакансиями (необязательно)
+    <div class="hint">хэндлы через запятую, без @</div>
+    <input type="text" name="channels" placeholder="hh_vacancies, product_jobs">
+  </label>
+
+  <label>Целевые компании на hh.ru (необязательно)
+    <div class="hint">через запятую, формат Название:ID (ID — из ссылки hh.ru/employer/ID)</div>
+    <input type="text" name="hh_companies" placeholder="Яндекс:1234567">
+  </label>
+
+  <label>Поисковые запросы на hh.ru
+    <div class="hint">через запятую — что искать по рынку</div>
+    <input type="text" name="hh_titles" required placeholder="Product Manager, Senior Product Manager">
+  </label>
+
+  <button type="submit" id="submitBtn">Зарегистрироваться</button>
+</form>
+
+<div id="error"></div>
+<div id="result"></div>
+
+<script>
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxz3yd_rKy1NXRiBQYZRcUyudK_fkY9fmzlF5VQusznAz4lta7WyrjrMsg06jGtoBP62w/exec";
+
+document.getElementById("signupForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const btn = document.getElementById("submitBtn");
+  const errorBox = document.getElementById("error");
+  const resultBox = document.getElementById("result");
+  errorBox.style.display = "none";
+  resultBox.style.display = "none";
+  btn.disabled = true;
+  btn.textContent = "Отправляю...";
+
+  const formData = new FormData(e.target);
+  const payload = Object.fromEntries(formData.entries());
+
+  try {
+    const resp = await fetch(APPS_SCRIPT_URL, {
+      method: "POST",
+      body: JSON.stringify(payload),
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
+    });
+    const data = await resp.json();
+
+    if (data.status !== "ok") {
+      throw new Error(data.message || "Неизвестная ошибка");
+    }
+
+    resultBox.innerHTML = `
+      <b>Готово! Остался последний шаг.</b><br><br>
+      1. Нажмите на ссылку и в открывшемся Telegram нажмите «Start»:<br>
+      <a href="${data.telegram_deep_link}" target="_blank">${data.telegram_deep_link}</a><br><br>
+      2. Ваша личная таблица (доступ уже открыт на ваш e-mail):<br>
+      <a href="${data.sheet_url}" target="_blank">${data.sheet_url}</a><br><br>
+      После этого дайджест вакансий начнёт приходить вам в Telegram каждый день.
+    `;
+    resultBox.style.display = "block";
+    e.target.style.display = "none";
+  } catch (err) {
+    errorBox.textContent = "Ошибка: " + err.message + ". Попробуйте ещё раз или напишите администратору.";
+    errorBox.style.display = "block";
+    btn.disabled = false;
+    btn.textContent = "Зарегистрироваться";
+  }
+});
+</script>
+
+</body>
+</html>
