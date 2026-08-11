@@ -31,6 +31,7 @@ import fetch_hh_scan
 import sheets_sync
 import notify
 import digest as digest_core
+import radar_routing as routing
 
 # Общая (одна на всех пользователей) рубрика и пороги — можно вынести в отдельный
 # YAML, если захотите разную строгость оценки для разных людей. Для MVP — общие.
@@ -43,6 +44,13 @@ DEFAULT_SCORING_RUBRIC = [
     {"key": "growth", "label": "Потенциал роста/обучения", "max_score": 10},
 ]
 DEFAULT_THRESHOLDS = {"fit": 70, "borderline": 50}
+
+# База источников (sources.json). Читается один раз при старте.
+SOURCES = routing.load_sources()
+
+# Потолок каналов на пользователя. 200 = «широко», фактически берутся все
+# подходящие (в базе 157 каналов). Уменьшите, если прогон станет долгим.
+MAX_CHANNELS_PER_USER = 200
 DEFAULT_ANTI_FUNCTIONS: list[str] = []
 DEFAULT_NOISE_KEYWORDS = ["ищу работу", "резюме", "реклама", "подборка каналов", "розыгрыш"]
 DEFAULT_RED_FLAGS = ["серая зарплата", "испытательный срок без оформления"]
@@ -66,12 +74,16 @@ HH_SETTINGS = {
 def build_profile(user: dict[str, Any]) -> dict[str, Any]:
     """Собирает profile-словарь в том же формате, что и profile.yaml
     (переиспользуем все функции digest.py без изменений)."""
+    locations = user.get("locations_allowed", "")
     return {
         "candidate": {
             "summary": user.get("candidate_summary", ""),
             "target_titles": users_sheet.split_csv(user.get("target_titles", "")),
             "seniority": users_sheet.split_csv(user.get("seniority", "")),
-            "locations_allowed": users_sheet.split_csv(user.get("locations_allowed", "")),
+            "locations_allowed": users_sheet.split_csv(locations),
+            # Флаг для гео-фильтра: если человек готов на удалёнку, регион вакансии
+            # не должен её резать (на hh у удалённых вакансий всё равно стоит город).
+            "remote_ok": routing.detect_remote(locations),
         },
         "filters": {
             "anti_functions": DEFAULT_ANTI_FUNCTIONS,
@@ -87,8 +99,26 @@ def build_profile(user: dict[str, Any]) -> dict[str, Any]:
 def collect_items_for_user(user: dict[str, Any]) -> list[dict[str, Any]]:
     items: list[dict[str, Any]] = []
 
-    # --- Telegram-каналы пользователя ---
-    channels = users_sheet.split_csv(user.get("channels", ""))
+    # --- Маршрутизация: подбираем источники по анкете ---
+    # Поле `channels` теперь необязательное — это extra_channels, каналы клиента,
+    # которые идут первыми. Основной набор подбирается из базы источников.
+    plan = routing.build_plan(
+        SOURCES,
+        routing.ClientProfile(
+            role=user.get("target_titles", "") or user.get("candidate_summary", ""),
+            level=user.get("seniority", ""),
+            locations=user.get("locations_allowed", ""),
+            extra_channels=users_sheet.split_csv(user.get("channels", "")),
+        ),
+        max_channels=MAX_CHANNELS_PER_USER,
+    )
+    name = user.get("name", "?")
+    print(f"[{name}] сферы: {', '.join(plan.spheres)}")
+    print(f"[{name}] каналов подобрано: {len(plan.telegram_handles)}, "
+          f"регион hh: {plan.hh_area}, удалёнка: {plan.remote}")
+
+    # --- Telegram-каналы из плана ---
+    channels = plan.telegram_handles
     for handle in channels:
         html = fetch_telegram.fetch_channel_html(handle, TELEGRAM_SETTINGS)
         if html is None:
@@ -112,9 +142,13 @@ def collect_items_for_user(user: dict[str, Any]) -> list[dict[str, Any]]:
         time.sleep(HH_SETTINGS["request_delay_sec"])
 
     # --- hh.ru: рыночный поиск по заголовкам пользователя ---
-    hh_titles = users_sheet.split_csv(user.get("hh_titles", ""))
+    # Регион берём из маршрутизации; каждый титул ищем отдельным запросом —
+    # склеенная строка через запятую даёт мусорную выдачу.
+    area_ids = [int(plan.hh_area)] if plan.hh_area.isdigit() else None
+    hh_titles = (users_sheet.split_csv(user.get("hh_titles", ""))
+                 or users_sheet.split_csv(user.get("target_titles", "")))
     for title in hh_titles:
-        vacancies = fetch_hh_scan.search_vacancies(HH_SETTINGS, text=title)
+        vacancies = fetch_hh_scan.search_vacancies(HH_SETTINGS, text=title, area_ids=area_ids)
         for v in vacancies:
             if v["vacancy_id"] in seen_ids:
                 continue

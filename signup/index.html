@@ -15,6 +15,8 @@
   button:disabled { background: #999; }
   #result { margin-top: 24px; padding: 16px; border-radius: 8px; background: #f0f9f0; border: 1px solid #bfe6bf; display: none; }
   #result a { color: #2563eb; }
+  details { margin-top: 22px; border: 1px solid #e5e5e5; border-radius: 8px; padding: 12px 14px; }
+  details summary { cursor: pointer; font-weight: 600; font-size: 14px; }
   #error { margin-top: 16px; color: #c00; display: none; }
 </style>
 </head>
@@ -53,20 +55,29 @@
     <input type="text" name="locations_allowed" required placeholder="Москва, Санкт-Петербург, Удалённо">
   </label>
 
-  <label>Telegram-каналы с вакансиями (необязательно)
-    <div class="hint">хэндлы через запятую, без @</div>
-    <input type="text" name="channels" placeholder="hh_vacancies, product_jobs">
-  </label>
+  <details>
+    <summary>Расширенные настройки (необязательно)</summary>
+    <p class="hint" style="margin-top:10px">
+      Заполнять не нужно. Система сама подберёт источники по вашей должности —
+      более 150 профильных Telegram-каналов, hh.ru, Хабр Карьера, SuperJob, Avito.
+      Эти поля — для тех, кто точно знает, что хочет добавить своё.
+    </p>
 
-  <label>Целевые компании на hh.ru (необязательно)
-    <div class="hint">через запятую, формат Название:ID (ID — из ссылки hh.ru/employer/ID)</div>
-    <input type="text" name="hh_companies" placeholder="Яндекс:1234567">
-  </label>
+    <label>Свои Telegram-каналы
+      <div class="hint">хэндлы через запятую, без @ — добавятся к автоподбору</div>
+      <input type="text" name="channels" placeholder="mychannel, anotherchannel">
+    </label>
 
-  <label>Поисковые запросы на hh.ru
-    <div class="hint">через запятую — что искать по рынку</div>
-    <input type="text" name="hh_titles" required placeholder="Product Manager, Senior Product Manager">
-  </label>
+    <label>Целевые компании на hh.ru
+      <div class="hint">через запятую, формат Название:ID (ID — из ссылки hh.ru/employer/ID)</div>
+      <input type="text" name="hh_companies" placeholder="Яндекс:1234567">
+    </label>
+
+    <label>Свои поисковые запросы на hh.ru
+      <div class="hint">через запятую. Если пусто — ищем по должностям выше</div>
+      <input type="text" name="hh_titles" placeholder="Product Manager, Head of Product">
+    </label>
+  </details>
 
   <button type="submit" id="submitBtn">Зарегистрироваться</button>
 </form>

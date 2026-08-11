@@ -1,0 +1,1999 @@
+{
+ "spheres": [
+  {
+   "name": "IT",
+   "keywords": [
+    "разработчик",
+    "developer",
+    "программист",
+    "python",
+    "java",
+    "javascript",
+    "frontend",
+    "backend",
+    "fullstack",
+    "devops",
+    "qa",
+    "тестировщик",
+    "аналитик данных",
+    "data scientist",
+    "ml",
+    "аналитик",
+    "product manager",
+    "продакт",
+    "project manager",
+    "техлид",
+    "cto"
+   ]
+  },
+  {
+   "name": "IT & Digital",
+   "keywords": [
+    "digital",
+    "диджитал",
+    "продуктовый",
+    "ux",
+    "ui",
+    "продакт-дизайнер",
+    "growth"
+   ]
+  },
+  {
+   "name": "ТОПы",
+   "keywords": [
+    "директор",
+    "ceo",
+    "cfo",
+    "coo",
+    "cto",
+    "hrd",
+    "руководитель",
+    "head of",
+    "начальник",
+    "вице-президент",
+    "управляющий",
+    "топ-менеджер",
+    "генеральный",
+    "коммерческий директор"
+   ]
+  },
+  {
+   "name": "финансы",
+   "keywords": [
+    "финансовый",
+    "финансист",
+    "банк",
+    "аудит",
+    "ifrs",
+    "мсфо",
+    "контролер",
+    "казначей",
+    "инвестиции",
+    "cfo",
+    "экономист"
+   ]
+  },
+  {
+   "name": "юриспруденция",
+   "keywords": [
+    "юрист",
+    "legal",
+    "правовой",
+    "комплаенс",
+    "судебный",
+    "корпоративный юрист",
+    "ip",
+    "инхаус"
+   ]
+  },
+  {
+   "name": "HR",
+   "keywords": [
+    "hr",
+    "рекрутер",
+    "рекрутинг",
+    "кадры",
+    "персонал",
+    "hrbp",
+    "c&b",
+    "обучение",
+    "t&d",
+    "hr-аналитик"
+   ]
+  },
+  {
+   "name": "маркетинг",
+   "keywords": [
+    "маркетолог",
+    "маркетинг",
+    "smm",
+    "pr",
+    "бренд",
+    "реклама",
+    "performance",
+    "контент",
+    "копирайтер",
+    "медиа",
+    "трафик"
+   ]
+  },
+  {
+   "name": "бухгалтеры",
+   "keywords": [
+    "бухгалтер",
+    "главбух",
+    "учет",
+    "налоги",
+    "1с"
+   ]
+  },
+  {
+   "name": "ИБ",
+   "keywords": [
+    "информационная безопасность",
+    "инфобез",
+    "security",
+    "soc",
+    "pentest",
+    "безопасник"
+   ]
+  },
+  {
+   "name": "госсектор",
+   "keywords": [
+    "госслужба",
+    "министерство",
+    "ведомство",
+    "госсектор",
+    "муниципальный"
+   ]
+  },
+  {
+   "name": "мобильная разработка",
+   "keywords": [
+    "ios",
+    "android",
+    "swift",
+    "kotlin",
+    "flutter",
+    "react native",
+    "мобильный разработчик"
+   ]
+  },
+  {
+   "name": "питон",
+   "keywords": [
+    "python",
+    "django",
+    "fastapi",
+    "питон"
+   ]
+  },
+  {
+   "name": "C++",
+   "keywords": [
+    "c++",
+    "си плюс плюс",
+    "embedded"
+   ]
+  },
+  {
+   "name": "GameDev",
+   "keywords": [
+    "геймдев",
+    "gamedev",
+    "unity",
+    "unreal",
+    "игровой"
+   ]
+  },
+  {
+   "name": "дизайн",
+   "keywords": [
+    "дизайнер",
+    "графический дизайн",
+    "веб-дизайн",
+    "motion"
+   ]
+  },
+  {
+   "name": "UX/UI & Product Design",
+   "keywords": [
+    "ux",
+    "ui",
+    "продуктовый дизайнер",
+    "интерфейс"
+   ]
+  },
+  {
+   "name": "креатив",
+   "keywords": [
+    "креатив",
+    "арт-директор",
+    "продюсер",
+    "фотограф",
+    "видеограф",
+    "творческий"
+   ]
+  },
+  {
+   "name": "SMM",
+   "keywords": [
+    "smm",
+    "соцсети",
+    "контент-менеджер",
+    "комьюнити"
+   ]
+  },
+  {
+   "name": "архитекторы",
+   "keywords": [
+    "архитектор",
+    "проектировщик",
+    "bim"
+   ]
+  },
+  {
+   "name": "дизайнеры и архитекторы",
+   "keywords": [
+    "интерьер",
+    "дизайн интерьера",
+    "архитектурный"
+   ]
+  },
+  {
+   "name": "стройка",
+   "keywords": [
+    "строительство",
+    "стройка",
+    "прораб",
+    "смр",
+    "инженер пто"
+   ]
+  },
+  {
+   "name": "общепит",
+   "keywords": [
+    "ресторан",
+    "horeca",
+    "повар",
+    "шеф",
+    "бар",
+    "кафе"
+   ]
+  },
+  {
+   "name": "удаленка",
+   "keywords": [
+    "удалённо",
+    "удаленка",
+    "remote",
+    "из дома"
+   ]
+  },
+  {
+   "name": "релокация и удаленка",
+   "keywords": [
+    "релокация",
+    "переезд",
+    "relocation",
+    "виза",
+    "за рубеж"
+   ]
+  },
+  {
+   "name": "общее",
+   "keywords": []
+  }
+ ],
+ "telegram": [
+  {
+   "handle": "legaljobsradar",
+   "url": "https://t.me/legaljobsradar",
+   "sphere": "юриспруденция",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "aestheticsoflawjob",
+   "url": "https://t.me/aestheticsoflawjob",
+   "sphere": "юриспруденция",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "joblawyer",
+   "url": "https://t.me/joblawyer",
+   "sphere": "юриспруденция",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "RussianGoverCalls",
+   "url": "https://t.me/RussianGoverCalls",
+   "sphere": "госсектор",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "vacancy_gossector",
+   "url": "https://t.me/vacancy_gossector",
+   "sphere": "госсектор",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "agnogossl",
+   "url": "https://t.me/agnogossl",
+   "sphere": "госсектор",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "Horeca_Job",
+   "url": "https://t.me/Horeca_Job",
+   "sphere": "общепит",
+   "level": "",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "HorecaSPB",
+   "url": "https://t.me/HorecaSPB",
+   "sphere": "общепит",
+   "level": "",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "horecahr",
+   "url": "https://t.me/horecahr",
+   "sphere": "общепит",
+   "level": "",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "bankman_20",
+   "url": "https://t.me/bankman_20",
+   "sphere": "финансы",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "finexecutive",
+   "url": "https://t.me/finexecutive",
+   "sphere": "финансы",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "top_fins",
+   "url": "https://t.me/top_fins",
+   "sphere": "финансы",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "jtbl_vacancy",
+   "url": "https://t.me/jtbl_vacancy",
+   "sphere": "IT & Digital",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "jobs_it",
+   "url": "https://t.me/jobs_it",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "witrec",
+   "url": "https://t.me/witrec",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "devs_it",
+   "url": "https://t.me/devs_it",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "workitkz",
+   "url": "https://t.me/workitkz",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "forproducts",
+   "url": "https://t.me/forproducts",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "normrabota",
+   "url": "https://t.me/normrabota",
+   "sphere": "IT & Digital",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "digital_rabota",
+   "url": "https://t.me/digital_rabota",
+   "sphere": "IT & Digital",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "young_relocate",
+   "url": "https://t.me/young_relocate",
+   "sphere": "IT & Digital",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "remotegeekjob",
+   "url": "https://t.me/remotegeekjob",
+   "sphere": "IT & Digital",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "geekjobs",
+   "url": "https://t.me/geekjobs",
+   "sphere": "IT & Digital",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "forchiefs",
+   "url": "https://t.me/forchiefs",
+   "sphere": "IT & Digital",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "it_vakansii_jobs",
+   "url": "https://t.me/it_vakansii_jobs",
+   "sphere": "IT & Digital",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "Gamedevjobs",
+   "url": "https://t.me/Gamedevjobs",
+   "sphere": "GameDev",
+   "level": "",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "rabota_v_gamedeve",
+   "url": "https://t.me/rabota_v_gamedeve",
+   "sphere": "GameDev",
+   "level": "",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "devjobs",
+   "url": "https://t.me/devjobs",
+   "sphere": "GameDev",
+   "level": "",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "mobiledevjob",
+   "url": "https://t.me/mobiledevjob",
+   "sphere": "мобильная разработка",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "mobileDevJobs",
+   "url": "https://t.me/mobileDevJobs",
+   "sphere": "мобильная разработка",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "android_jobs",
+   "url": "https://t.me/android_jobs",
+   "sphere": "мобильная разработка",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "job_python",
+   "url": "https://t.me/job_python",
+   "sphere": "питон",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "python_djangojobs",
+   "url": "https://t.me/python_djangojobs",
+   "sphere": "питон",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "forpython",
+   "url": "https://t.me/forpython",
+   "sphere": "питон",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "job_pythonz",
+   "url": "https://t.me/job_pythonz",
+   "sphere": "питон",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "toplevel_job",
+   "url": "https://t.me/toplevel_job",
+   "sphere": "ТОПы",
+   "level": "C-level / топ",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "work_for_top",
+   "url": "https://t.me/work_for_top",
+   "sphere": "ТОПы",
+   "level": "C-level / топ",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "career_ru",
+   "url": "https://t.me/career_ru",
+   "sphere": "ТОПы",
+   "level": "C-level / топ",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "vacanciesbest",
+   "url": "https://t.me/vacanciesbest",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "vacancyCRC",
+   "url": "https://t.me/vacancyCRC",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "zarplata180",
+   "url": "https://t.me/zarplata180",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "hrhubvacancy300",
+   "url": "https://t.me/hrhubvacancy300",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "theyseeku",
+   "url": "https://t.me/theyseeku",
+   "sphere": "удаленка",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "distantsiya",
+   "url": "https://t.me/distantsiya",
+   "sphere": "удаленка",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "huggabletalents",
+   "url": "https://t.me/huggabletalents",
+   "sphere": "креатив",
+   "level": "",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "dddwork",
+   "url": "https://t.me/dddwork",
+   "sphere": "креатив",
+   "level": "",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "jobpower",
+   "url": "https://t.me/jobpower",
+   "sphere": "креатив",
+   "level": "",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "JOBsmf",
+   "url": "https://t.me/JOBsmf",
+   "sphere": "креатив",
+   "level": "",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "fashionfaculty",
+   "url": "https://t.me/fashionfaculty",
+   "sphere": "креатив",
+   "level": "",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "jobforpr",
+   "url": "https://t.me/jobforpr",
+   "sphere": "маркетинг",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "morejobs",
+   "url": "https://t.me/morejobs",
+   "sphere": "маркетинг",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "forallmarketing",
+   "url": "https://t.me/forallmarketing",
+   "sphere": "маркетинг",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "marketing_jobs",
+   "url": "https://t.me/marketing_jobs",
+   "sphere": "маркетинг",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "infosec_work",
+   "url": "https://t.me/infosec_work",
+   "sphere": "ИБ",
+   "level": "",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "wasa_job",
+   "url": "https://t.me/wasa_job",
+   "sphere": "архитекторы",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "stroyka_work",
+   "url": "https://t.me/stroyka_work",
+   "sphere": "стройка",
+   "level": "",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "HRArchitect",
+   "url": "https://t.me/HRArchitect",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "edu_HR",
+   "url": "https://t.me/edu_HR",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "worksvsem",
+   "url": "https://t.me/worksvsem",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "workfordesigner",
+   "url": "https://t.me/workfordesigner",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "talentedpeoples",
+   "url": "https://t.me/talentedpeoples",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "cfo_ifrs",
+   "url": "https://t.me/cfo_ifrs",
+   "sphere": "ТОПы",
+   "level": "C-level / топ",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "frilanSAR",
+   "url": "https://t.me/frilanSAR",
+   "sphere": "общее",
+   "level": "junior / массовый",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "runello_rus_mobileappdevelopment",
+   "url": "https://t.me/runello_rus_mobileappdevelopment",
+   "sphere": "мобильная разработка",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "MoscowJobForYou",
+   "url": "https://t.me/MoscowJobForYou",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "TRemoters",
+   "url": "https://t.me/TRemoters",
+   "sphere": "удаленка",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "smmfreelancer",
+   "url": "https://t.me/smmfreelancer",
+   "sphere": "SMM",
+   "level": "junior / массовый",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "work_from_lina",
+   "url": "https://t.me/work_from_lina",
+   "sphere": "удаленка",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "runello_rus_hr",
+   "url": "https://t.me/runello_rus_hr",
+   "sphere": "HR",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "runello_rus_python",
+   "url": "https://t.me/runello_rus_python",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "runello_rus_webdesign",
+   "url": "https://t.me/runello_rus_webdesign",
+   "sphere": "UX/UI & Product Design",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "runello_rus_php",
+   "url": "https://t.me/runello_rus_php",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "workremotejob",
+   "url": "https://t.me/workremotejob",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "workfreelan",
+   "url": "https://t.me/workfreelan",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "runello_rus_c20",
+   "url": "https://t.me/runello_rus_c20",
+   "sphere": "C++",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "Jobsvacancis",
+   "url": "https://t.me/Jobsvacancis",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "runello_rus_c",
+   "url": "https://t.me/runello_rus_c",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "runello_rus_digitalmarketing",
+   "url": "https://t.me/runello_rus_digitalmarketing",
+   "sphere": "маркетинг",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "theypaywell",
+   "url": "https://t.me/theypaywell",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "astya_r",
+   "url": "https://t.me/astya_r",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "runello_rus_webdevelopment",
+   "url": "https://t.me/runello_rus_webdevelopment",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "runello_rus_typescript",
+   "url": "https://t.me/runello_rus_typescript",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "runello_rus_datascience",
+   "url": "https://t.me/runello_rus_datascience",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "runello_rus_goland",
+   "url": "https://t.me/runello_rus_goland",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "runello_rus_html",
+   "url": "https://t.me/runello_rus_html",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "targetsmmvakansii",
+   "url": "https://t.me/targetsmmvakansii",
+   "sphere": "маркетинг",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "theypaygood",
+   "url": "https://t.me/theypaygood",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "workygram",
+   "url": "https://t.me/workygram",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "vakansii_it",
+   "url": "https://t.me/vakansii_it",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "runello_rus_javascript",
+   "url": "https://t.me/runello_rus_javascript",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "proffreelancee",
+   "url": "https://t.me/proffreelancee",
+   "sphere": "общее",
+   "level": "junior / массовый",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "fintech_vacancy",
+   "url": "https://t.me/fintech_vacancy",
+   "sphere": "финансы",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "frilans_na_legke",
+   "url": "https://t.me/frilans_na_legke",
+   "sphere": "общее",
+   "level": "junior / массовый",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "frilancekomfort",
+   "url": "https://t.me/frilancekomfort",
+   "sphere": "общее",
+   "level": "junior / массовый",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "runello_rus_contentmanagement",
+   "url": "https://t.me/runello_rus_contentmanagement",
+   "sphere": "маркетинг",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "runello_rus_frontend",
+   "url": "https://t.me/runello_rus_frontend",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "runello_rus_backend",
+   "url": "https://t.me/runello_rus_backend",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "iRecommendWork_IT",
+   "url": "https://t.me/iRecommendWork_IT",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "flexible_100K",
+   "url": "https://t.me/flexible_100K",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "tech_recruiter_vacancy",
+   "url": "https://t.me/tech_recruiter_vacancy",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "hrhubresume",
+   "url": "https://t.me/hrhubresume",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "hrhubworld",
+   "url": "https://t.me/hrhubworld",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "habr_career",
+   "url": "https://t.me/habr_career",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "iRecommendWork",
+   "url": "https://t.me/iRecommendWork",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "komandos_n1",
+   "url": "https://t.me/komandos_n1",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "hrhub200",
+   "url": "https://t.me/hrhub200",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "hrhubvacancy",
+   "url": "https://t.me/hrhubvacancy",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "forhr",
+   "url": "https://t.me/forhr",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "fordesigner",
+   "url": "https://t.me/fordesigner",
+   "sphere": "маркетинг",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "forallmedia",
+   "url": "https://t.me/forallmedia",
+   "sphere": "маркетинг",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "jobforjunior",
+   "url": "https://t.me/jobforjunior",
+   "sphere": "общее",
+   "level": "junior / массовый",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "POISK_ASSISTANTS",
+   "url": "https://t.me/POISK_ASSISTANTS",
+   "sphere": "общее",
+   "level": "junior / массовый",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "biznesassistUMA",
+   "url": "https://t.me/biznesassistUMA",
+   "sphere": "общее",
+   "level": "junior / массовый",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "sales_rabota",
+   "url": "https://t.me/sales_rabota",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "mop_school",
+   "url": "https://t.me/mop_school",
+   "sphere": "общее",
+   "level": "junior / массовый",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "volkonwork",
+   "url": "https://t.me/volkonwork",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "rabota_go",
+   "url": "https://t.me/rabota_go",
+   "sphere": "маркетинг",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "mediajobs_ru",
+   "url": "https://t.me/mediajobs_ru",
+   "sphere": "маркетинг",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "webfrl",
+   "url": "https://t.me/webfrl",
+   "sphere": "общее",
+   "level": "junior / массовый",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "frilanc",
+   "url": "https://t.me/frilanc",
+   "sphere": "общее",
+   "level": "junior / массовый",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "freelancevpsmm",
+   "url": "https://t.me/freelancevpsmm",
+   "sphere": "общее",
+   "level": "junior / массовый",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "kuznicakadry",
+   "url": "https://t.me/kuznicakadry",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "bina_Znaet",
+   "url": "https://t.me/bina_Znaet",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "Rabota8",
+   "url": "https://t.me/Rabota8",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "workoo",
+   "url": "https://t.me/workoo",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "zapwork",
+   "url": "https://t.me/zapwork",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "designer_ru",
+   "url": "https://t.me/designer_ru",
+   "sphere": "маркетинг",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "jobstobefound",
+   "url": "https://t.me/jobstobefound",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "work_hr",
+   "url": "https://t.me/work_hr",
+   "sphere": "HR",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "tutvacancy",
+   "url": "https://t.me/tutvacancy",
+   "sphere": "HR",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "WebDizaineri",
+   "url": "https://t.me/WebDizaineri",
+   "sphere": "дизайн",
+   "level": "",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "hr_job_kadri",
+   "url": "https://t.me/hr_job_kadri",
+   "sphere": "HR",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "business_forbes",
+   "url": "https://t.me/business_forbes",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "forallsales",
+   "url": "https://t.me/forallsales",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "pomochnik_vakansii",
+   "url": "https://t.me/pomochnik_vakansii",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "AssistHelper",
+   "url": "https://t.me/AssistHelper",
+   "sphere": "общее",
+   "level": "junior / массовый",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "data_hr",
+   "url": "https://t.me/data_hr",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "hireproproduct",
+   "url": "https://t.me/hireproproduct",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "zarubezhom_jobs",
+   "url": "https://t.me/zarubezhom_jobs",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "rusukrjobs",
+   "url": "https://t.me/rusukrjobs",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "legal_jobs_junior",
+   "url": "https://t.me/legal_jobs_junior",
+   "sphere": "юриспруденция",
+   "level": "junior / массовый",
+   "priority": "Низкий"
+  },
+  {
+   "handle": "jobs_finlegal",
+   "url": "https://t.me/jobs_finlegal",
+   "sphere": "юриспруденция",
+   "level": "",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "HR_Analytics_Jobs",
+   "url": "https://t.me/HR_Analytics_Jobs",
+   "sphere": "HR",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "cfosearch",
+   "url": "https://t.me/cfosearch",
+   "sphere": "финансы",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "careerfedoroff",
+   "url": "https://t.me/careerfedoroff",
+   "sphere": "ТОПы",
+   "level": "C-level / топ",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "TOP_job_in_production",
+   "url": "https://t.me/TOP_job_in_production",
+   "sphere": "ТОПы",
+   "level": "C-level / топ",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "avito_career",
+   "url": "https://t.me/avito_career",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "vtb_career",
+   "url": "https://t.me/vtb_career",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "jobinspb",
+   "url": "https://t.me/jobinspb",
+   "sphere": "ТОПы",
+   "level": "C-level / топ",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "HRTech_Jobs",
+   "url": "https://t.me/HRTech_Jobs",
+   "sphere": "общее",
+   "level": "",
+   "priority": "Средний"
+  },
+  {
+   "handle": "buhjob",
+   "url": "https://t.me/buhjob",
+   "sphere": "бухгалтеры",
+   "level": "",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "product_jobs",
+   "url": "https://t.me/product_jobs",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "data_analysis_jobs",
+   "url": "https://t.me/data_analysis_jobs",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "peersjobboard",
+   "url": "https://t.me/peersjobboard",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "jobs_pm",
+   "url": "https://t.me/jobs_pm",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "productr_jobs",
+   "url": "https://t.me/productr_jobs",
+   "sphere": "IT",
+   "level": "middle–senior",
+   "priority": "Высокий"
+  },
+  {
+   "handle": "interior_russia",
+   "url": "https://t.me/interior_russia",
+   "sphere": "дизайнеры и архитекторы",
+   "level": "",
+   "priority": "Средний"
+  }
+ ],
+ "search": [
+  {
+   "name": "hh.ru (API)",
+   "template": "https://api.hh.ru/vacancies?text={query}&area={area}&experience={experience}&per_page=100&order_by=publication_time",
+   "sphere": "общее",
+   "parseable": true,
+   "comment": "Основной источник. area: 1=Москва, 2=СПб, 113=Россия. experience: noExperience / between1And3 / between3And6 / moreThan6"
+  },
+  {
+   "name": "Хабр Карьера",
+   "template": "https://career.habr.com/vacancies?q={query}&type=all",
+   "sphere": "IT",
+   "parseable": true,
+   "comment": "Есть публичный поиск, парсинг реалистичен"
+  },
+  {
+   "name": "SuperJob",
+   "template": "https://russia.superjob.ru/vacancy/search/?keywords={query}",
+   "sphere": "общее",
+   "parseable": true,
+   "comment": "Для API нужен ключ разработчика"
+  },
+  {
+   "name": "Avito Работа",
+   "template": "https://www.avito.ru/all/vakansii?q={query}",
+   "sphere": "общее",
+   "parseable": true,
+   "comment": "Много массовых вакансий — фильтровать по уровню"
+  },
+  {
+   "name": "LinkedIn Jobs (поиск)",
+   "template": "https://www.linkedin.com/jobs/search/?keywords={query}&location={location}",
+   "sphere": "общее",
+   "parseable": false,
+   "comment": "LinkedIn блокирует автосбор (ToS + технически). Отдаём клиенту готовой ссылкой-кнопкой"
+  }
+ ],
+ "manual": [
+  {
+   "name": "t.me/ipitlegal",
+   "sphere": "юриспруденция",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "t.me/zakon_hr",
+   "sphere": "юриспруденция",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "t.me/legal_jobs",
+   "sphere": "юриспруденция",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "t.me/legaltalents",
+   "sphere": "юриспруденция",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Я Топ",
+   "sphere": "ТОПы",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Вакансии для Руководителей (CEO, CEO-1, CEO-2)",
+   "sphere": "ТОПы",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "КАРЬЕРА БЕЗ ГРАНИЦ | Вакансии | Релокация и удалёнка",
+   "sphere": "релокация и удаленка",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "https://t.me/+9m6T9_m_6Ww4ZDhi",
+   "sphere": "общее",
+   "reason": "приватный инвайт"
+  },
+  {
+   "name": "https://t.me/+R8CR4qVjYzT_LMbK",
+   "sphere": "общее",
+   "reason": "приватный инвайт"
+  },
+  {
+   "name": "https://github.com/remote-jobs/remote-jobs",
+   "sphere": "удаленка",
+   "reason": "не парсится"
+  },
+  {
+   "name": "https://www.ycombinator.com/jobs/",
+   "sphere": "удаленка",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://weworkremotely.com/remote-companies",
+   "sphere": "удаленка",
+   "reason": "не парсится"
+  },
+  {
+   "name": "https://about.gitlab.com/jobs/",
+   "sphere": "удаленка",
+   "reason": "не парсится"
+  },
+  {
+   "name": "https://automattic.com/work-with-us/",
+   "sphere": "удаленка",
+   "reason": "не парсится"
+  },
+  {
+   "name": "https://wellfound.com/jobs",
+   "sphere": "IT",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.hackerrank.com/jobs/search",
+   "sphere": "IT",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.topcoder.com/",
+   "sphere": "IT",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://startup.jobs/",
+   "sphere": "IT",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.workatastartup.com/",
+   "sphere": "IT",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.digitalnomadjobs.com/",
+   "sphere": "релокация и удаленка",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://nomadlist.com/jobs",
+   "sphere": "релокация и удаленка",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://workingnomads.com/jobs",
+   "sphere": "релокация и удаленка",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://problogger.com/jobs/",
+   "sphere": "маркетинг",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://bloggingpro.com/jobs/",
+   "sphere": "маркетинг",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://dribbble.com/jobs",
+   "sphere": "маркетинг",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.behance.net/joblist",
+   "sphere": "маркетинг",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://designjobs.aiga.org/",
+   "sphere": "маркетинг",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.freelancer.com/",
+   "sphere": "фриланс",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.upwork.com/",
+   "sphere": "фриланс",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.fiverr.com/",
+   "sphere": "фриланс",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.toptal.com/",
+   "sphere": "фриланс",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.peopleperhour.com/",
+   "sphere": "фриланс",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.guru.com/",
+   "sphere": "фриланс",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://99designs.com/",
+   "sphere": "фриланс",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://solidgigs.com/",
+   "sphere": "фриланс",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.remotasks.com/",
+   "sphere": "фриланс",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://pers.market/",
+   "sphere": "фриланс",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://hirehi.ru/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://hirify.me/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://gdejob.com/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://finder.work/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://career.habr.com/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://h.careers/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://weworkremotely.com/",
+   "sphere": "удаленка",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://remoteok.com/",
+   "sphere": "удаленка",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://remotive.com/",
+   "sphere": "удаленка",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://remote.co/",
+   "sphere": "удаленка",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://jobspresso.co/",
+   "sphere": "удаленка",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://dynamitejobs.com/",
+   "sphere": "удаленка",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://remote4me.com/",
+   "sphere": "удаленка",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.skipthedrive.com/",
+   "sphere": "удаленка",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.flexjobs.com/",
+   "sphere": "удаленка",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.linkedin.com/jobs/",
+   "sphere": "общее",
+   "reason": "не парсится"
+  },
+  {
+   "name": "https://www.indeed.com/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.glassdoor.com/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.ziprecruiter.com/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.careerbuilder.com/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://wantapply.com/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://de.indeed.com/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.fl.ru/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://wellfound.com/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://nodesk.co/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://remotewoman.com/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "Get on Board",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Remotar",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "JapanDev",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "TokyoDev",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "DaiJob",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Choose Your Boss",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "XING",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Bayt",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "GulfTalent",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "FUZU",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "SEEK",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "MyCareersFuture",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "NodeFlair",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Dubizzle Jobs",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "ExpatWoman Jobs",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Middle East Jobs",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Edarabia",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Ergodotisi",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Game Dev Cyprus",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Cyprus Job Market",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Alpha.jobs",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Job in Cyprus",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Работа на Кипре",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Astana Hub",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Glints",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Europe Langiage Jobs",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "HITMAKER",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "https://facancy.ru/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": ".ibestresume",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "hh.ru",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "https://careerspace.app/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "superjob.ru",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "https://www.rabota.ru/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://promopoisk.com/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://joblab.ru",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.zarplata.ru/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://gorodrabot.ru",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://jooble.org/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.avito.ru/moskva/rabota",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://careerist.ru",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "http://vdhl.ru/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "https://www.google.com/about/careers/applications/jobs/results?location=Russia",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "http://www.jobinmoscow.ru",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "Games Jobs Direct",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "GamesIndustry.biz",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "Gamejobs.co",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "CreativeHeads",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "GC Jobs",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "DevJobScanner",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  },
+  {
+   "name": "https://www.remocate.pro/",
+   "sphere": "общее",
+   "reason": "джоб-борд без шаблона поиска"
+  },
+  {
+   "name": "IT Relocation Europe",
+   "sphere": "общее",
+   "reason": "нет ссылки"
+  }
+ ]
+}

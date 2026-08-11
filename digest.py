@@ -127,12 +127,22 @@ def passes_layer1(item: dict[str, Any], profile: dict[str, Any]) -> tuple[bool, 
         if normalize_text(bad) in text:
             return False, f"анти-отрасль: {bad}"
 
-    allowed_locations = profile.get("candidate", {}).get("locations_allowed", [])
-    if allowed_locations:
+    candidate = profile.get("candidate", {})
+    allowed_locations = candidate.get("locations_allowed", [])
+
+    # «Удалённо» — это формат работы, а не город: у удалённых вакансий на hh
+    # всё равно проставлен город. Поэтому из списка локаций сначала выкидываем
+    # маркеры удалёнки, а сам факт согласия на удалёнку запоминаем отдельно.
+    remote_markers = ("удал", "remote", "из дома", "дистанц")
+    city_locations = [loc for loc in allowed_locations
+                      if not any(m in normalize_text(loc) for m in remote_markers)]
+    remote_ok = candidate.get("remote_ok") or len(city_locations) < len(allowed_locations)
+
+    # Если человек готов на удалёнку или городов не указано — по гео не режем вовсе.
+    if city_locations and not remote_ok:
         area = normalize_text(item.get("area", ""))
         if area and not any(normalize_text(loc) in area or area in normalize_text(loc)
-                             for loc in allowed_locations):
-            # если геолокация известна и явно не совпадает — режем
+                             for loc in city_locations):
             if "удал" not in text and "remote" not in text:
                 return False, f"гео не подходит: {item.get('area')}"
 

@@ -50,7 +50,9 @@ function jsonResponse(obj) {
 }
 
 function registerUser(payload) {
-  const requiredFields = ["name", "email", "candidate_summary", "target_titles", "seniority", "locations_allowed", "hh_titles"];
+  // hh_titles больше не обязателен: если пусто, радар ищет по target_titles,
+  // а каналы подбирает маршрутизация по базе источников.
+  const requiredFields = ["name", "email", "candidate_summary", "target_titles", "seniority", "locations_allowed"];
   for (const f of requiredFields) {
     if (!payload[f]) throw new Error(`Не заполнено обязательное поле: ${f}`);
   }
@@ -105,6 +107,16 @@ function createPersonalSheet(userName, email) {
   sheet.setName("Реестр");
   sheet.appendRow(REGISTRY_HEADERS);
   sheet.setFrozenRows(1);
+
+  // Доступ служебному аккаунту — без него multi_run.py не сможет писать сюда.
+  const serviceEmail = PropertiesService.getScriptProperties().getProperty("SERVICE_ACCOUNT_EMAIL");
+  if (serviceEmail) {
+    try {
+      ss.addEditor(serviceEmail);
+    } catch (err) {
+      Logger.log("Не удалось выдать доступ служебному аккаунту: " + err);
+    }
+  }
 
   if (email) {
     try {
