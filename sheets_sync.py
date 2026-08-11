@@ -25,6 +25,7 @@ import json
 from typing import Any
 
 import gspread
+import digest as digest_core
 import yaml
 from google.oauth2.service_account import Credentials
 
@@ -89,8 +90,8 @@ def push_rows(rows: list[dict[str, Any]], sheet_id: str | None = None) -> int:
             continue  # уже в таблице, не дублируем
         new_rows.append([
             today,
-            r.get("title") or r.get("text", "")[:80],
-            r.get("company") or r.get("channel", ""),
+            digest_core.item_title(r),
+            digest_core.item_company(r),
             url,
             r.get("source", ""),
             r.get("score", {}).get("total", ""),

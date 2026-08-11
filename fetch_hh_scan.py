@@ -27,6 +27,7 @@ OAuth для чтения публичных вакансий. Если в ка�
 """
 from __future__ import annotations
 
+import os
 import time
 import json
 from typing import Any
@@ -37,6 +38,15 @@ import yaml
 CONFIG_PATH = "hh.yaml"
 API_BASE = "https://api.hh.ru/vacancies"
 
+# hh.ru требует User-Agent, представляющий приложение (имя + контакт).
+# Браузерная маскировка «Mozilla/5.0 ...» для их API подозрительна и даёт 403.
+DEFAULT_UA = "JobRadar/1.0 (contact: job-radar@example.com)"
+
+# Опционально: токен приложения hh (secret HH_TOKEN). Запросы без авторизации
+# у hh работают нестабильно — с токеном стабильнее. Как получить: dev.hh.ru →
+# зарегистрировать приложение → client_credentials.
+HH_TOKEN_ENV = "HH_TOKEN"
+
 
 def load_config(path: str = CONFIG_PATH) -> dict[str, Any]:
     with open(path, "r", encoding="utf-8") as f:
@@ -44,7 +54,14 @@ def load_config(path: str = CONFIG_PATH) -> dict[str, Any]:
 
 
 def _headers(settings: dict[str, Any]) -> dict[str, str]:
-    return {"User-Agent": settings.get("user_agent", "Mozilla/5.0")}
+    ua = settings.get("user_agent") or DEFAULT_UA
+    if ua.lower().startswith("mozilla"):
+        ua = DEFAULT_UA          # страхуемся от старых конфигов
+    headers = {"User-Agent": ua, "Accept": "application/json"}
+    token = os.environ.get(HH_TOKEN_ENV)
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    return headers
 
 
 def search_vacancies(
@@ -76,6 +93,11 @@ def search_vacancies(
             print(f"[hh] ошибка запроса: {e}")
             break
 
+        if resp.status_code == 403:
+            print("[hh] 403 Forbidden — hh.ru отклонил запрос. Вероятные причины: "
+                  "запросы без авторизации сейчас нестабильны (заведите секрет HH_TOKEN, "
+                  "см. README) либо блокировка IP дата-центра. Пропускаю hh.")
+            break
         if resp.status_code != 200:
             print(f"[hh] HTTP {resp.status_code} на странице {page}, останавливаюсь")
             break

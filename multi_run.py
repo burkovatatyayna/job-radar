@@ -66,7 +66,8 @@ HH_SETTINGS = {
     "max_pages": 2,
     "request_delay_sec": 3,
     "timeout_sec": 15,
-    "user_agent": "Mozilla/5.0 (compatible; PersonalJobRadar/1.0; +read-only)",
+    # hh.ru требует User-Agent с именем приложения и контактом, а не браузерную маскировку
+    "user_agent": "JobRadar/1.0 (contact: job-radar@example.com)",
     "enrich_with_description": True,
 }
 

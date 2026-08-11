@@ -60,6 +60,37 @@ def collect_raw_items() -> list[dict[str, Any]]:
 # ДЕДУП
 # ---------------------------------------------------------------------------
 
+def item_title(item: dict[str, Any]) -> str:
+    """Заголовок для показа. У вакансий с hh есть поле title, у постов из
+    Telegram его нет — берём первую осмысленную строку поста.
+    Всегда возвращает одну строку без переносов."""
+    def clean(s: str) -> str:
+        return " ".join(str(s).split())[:100]
+
+    if item.get("title"):
+        return clean(item["title"])
+
+    text = (item.get("text") or "").strip()
+    if not text:
+        return "(без заголовка)"
+
+    for line in text.split("\n"):
+        line = line.strip(" #*_—-•·➤▪️🔹🔥✅📌🌟")
+        # пропускаем строки из одних эмодзи/символов и слишком короткие
+        if len(line) >= 12 and any(ch.isalpha() for ch in line):
+            return clean(line)
+    return clean(text)
+
+
+def item_company(item: dict[str, Any]) -> str:
+    """Компания, а для Telegram — канал-источник."""
+    if item.get("company"):
+        return str(item["company"]).strip()
+    if item.get("channel"):
+        return f"@{item['channel']}"
+    return ""
+
+
 def normalize_text(s: str) -> str:
     return " ".join((s or "").lower().split())
 
@@ -289,10 +320,11 @@ def render_html(rows: list[dict[str, Any]]) -> str:
     def row_html(r: dict[str, Any]) -> str:
         letter = f"<details><summary>Сопроводительное письмо</summary><p>{r.get('cover_letter', '')}</p></details>" \
             if r.get("cover_letter") else ""
+        meta = " · ".join(x for x in [item_company(r), r.get("area", "")] if x)
         return f"""
         <div style="border:1px solid #ddd;border-radius:8px;padding:12px;margin-bottom:10px;">
-          <b><a href="{r.get('url','')}">{r.get('title','(без заголовка)')}</a></b><br>
-          <span style="color:#666">{r.get('company','')} · {r.get('area','')} · балл {r['score']['total']}</span>
+          <b><a href="{r.get('url','')}">{item_title(r)}</a></b><br>
+          <span style="color:#666">{meta} · балл {r['score']['total']}</span>
           <p style="color:#333">{r['score'].get('reasoning','')}</p>
           {letter}
         </div>"""
