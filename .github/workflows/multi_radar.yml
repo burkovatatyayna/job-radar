@@ -45,4 +45,5 @@ jobs:
           ADMIN_SHEET_ID: ${{ secrets.ADMIN_SHEET_ID }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          HH_TOKEN: ${{ secrets.HH_TOKEN }}
         run: python multi_run.py
