@@ -39,8 +39,12 @@ CONFIG_PATH = "hh.yaml"
 API_BASE = "https://api.hh.ru/vacancies"
 
 # hh.ru требует User-Agent, представляющий приложение (имя + контакт).
-# Браузерная маскировка «Mozilla/5.0 ...» для их API подозрительна и даёт 403.
-DEFAULT_UA = "JobRadar/1.0 (contact: job-radar@example.com)"
+# Браузерная маскировка «Mozilla/5.0 ...» для их API подозрительна, а домены-
+# заглушки вроде example.com могут быть в чёрном списке — отсюда 400
+# bad_user_agent/blacklisted. Задайте секрет HH_USER_AGENT со своим контактом:
+#   JobRadar/1.0 (contact: ваша-почта@gmail.com)
+DEFAULT_UA = "JobRadar/1.0"
+UA_ENV = "HH_USER_AGENT"
 
 # Опционально: токен приложения hh (secret HH_TOKEN). Запросы без авторизации
 # у hh работают нестабильно — с токеном стабильнее. Как получить: dev.hh.ru →
@@ -54,9 +58,9 @@ def load_config(path: str = CONFIG_PATH) -> dict[str, Any]:
 
 
 def _headers(settings: dict[str, Any]) -> dict[str, str]:
-    ua = settings.get("user_agent") or DEFAULT_UA
-    if ua.lower().startswith("mozilla"):
-        ua = DEFAULT_UA          # страхуемся от старых конфигов
+    ua = os.environ.get(UA_ENV) or settings.get("user_agent") or DEFAULT_UA
+    if ua.lower().startswith("mozilla") or "example.com" in ua.lower():
+        ua = DEFAULT_UA          # страхуемся от старых конфигов и заглушек
     headers = {"User-Agent": ua, "Accept": "application/json"}
     token = os.environ.get(HH_TOKEN_ENV)
     if token:
@@ -93,10 +97,17 @@ def search_vacancies(
             print(f"[hh] ошибка запроса: {e}")
             break
 
-        if resp.status_code == 403:
-            print("[hh] 403 Forbidden — hh.ru отклонил запрос. Вероятные причины: "
-                  "запросы без авторизации сейчас нестабильны (заведите секрет HH_TOKEN, "
-                  "см. README) либо блокировка IP дата-центра. Пропускаю hh.")
+        if resp.status_code in (400, 403):
+            # hh возвращает причину в теле: bad_user_agent/blacklisted,
+            # bad_argument/<поле>, oauth/... — печатаем, чтобы не гадать.
+            try:
+                detail = resp.json().get("errors")
+            except Exception:
+                detail = resp.text[:200]
+            print(f"[hh] HTTP {resp.status_code}, причина: {detail}")
+            if resp.status_code == 400 and "bad_user_agent" in str(detail):
+                print("[hh] → User-Agent отклонён. Укажите реальный контакт "
+                      "в секрете HH_USER_AGENT, см. ADMIN_SETUP.md")
             break
         if resp.status_code != 200:
             print(f"[hh] HTTP {resp.status_code} на странице {page}, останавливаюсь")

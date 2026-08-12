@@ -67,7 +67,8 @@ HH_SETTINGS = {
     "request_delay_sec": 3,
     "timeout_sec": 15,
     # hh.ru требует User-Agent с именем приложения и контактом, а не браузерную маскировку
-    "user_agent": "JobRadar/1.0 (contact: job-radar@example.com)",
+    # реальный контакт задаётся секретом HH_USER_AGENT (см. ADMIN_SETUP.md)
+    "user_agent": "JobRadar/1.0",
     "enrich_with_description": True,
 }
 
